@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  background-color: #292929;
+  font-size: 1rem;
+  color: #d3a3ff;
+}
+
+.cabecalho {
+  font-weight: 800;
+  color: rgb(224, 191, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.cabecalho img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.container-pai {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  padding: 2rem;
+  width: 350px;
+  height: 350px;
+}
+
+.legenda {
+  display: flex;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.contagem {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+input {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding: 5px;
+  border-radius: 5px;
+  width: 200px;
+  margin-top: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.btn {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #dfcaf3;
+  border-radius: 5px;
+  width: 150px;
+  padding: 5px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.btn:hover {
+  background-color: #ab66ec;
+  border-color: white;
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.input-text {
+  background-color: #8a2be2;
+  border: none;
+  color: aliceblue;
+  width: 200px;
+  border: 1px solid aliceblue;
+}
+
+.input-text::placeholder {
+  color: aliceblue;
+}
+
+form {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-button {
+  margin-top: 12px;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.container-footer {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  text-align: center;
+  color: #8a2be2;;
+}
+
+.container-footer a {
+  color: #8a2be2;
+}
+
+
+
+textarea {
+  width: 200px;
+  height: 75px;
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  text-wrap: wrap;
+  margin-top: 8px;
+  padding: 5px;
+  resize: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Extensão TT</title>
+  </head>
+  <body>
+    <div class="container-pai">
+      <header class="cabecalho">
+        <img src="icons/logoFP300.png" />
+        Transforme textos a
+      </header>
+      <form>
+        <input
+          type="text"
+          name="text"
+          id="input-text"
+          class="input-text"
+          maxlength="500"
+          placeholder="Digite o texto aqui"
+          required
+        />
+
+        <div class="container-button">
+          <button type="button" class="btn" id="btn-max">AA</button>
+          <button type="button" class="btn" id="btn-min">aa</button>
+        </div>
+        <div class="container-button">
+          <button type="button" class="btn" id="btn-cap">Aa</button>
+          <button type="button" class="btn" id="btn-clr">🗑️</button>
+        </div>
+      </form>
+
+      <div name="result" id="result" class="result">
+        <textarea id="textAreaResult" readonly>Resultado</textarea>
+      </div>
+
+      <div class="legenda">
+        Palavras:
+        <div class="contagem" id="contPalavra">0</div>
+        | Caracteres:
+        <div class="contagem" id="contCarac">0</div>
+      </div>
+
+      <footer class="container-footer">
+        Para mais opções, visite: <br />
+        <a href="https://github.com/Kadisa-Cyber" id="link-github"
+          >kauandias.com.br</a
+        >
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
