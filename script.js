@@ -18,17 +18,22 @@ function btnCap() {
 
   if (valorAtual.length > 0) {
     valorAtual = valorAtual.toLowerCase();
-    let frases = valorAtual.split(". ");
+
+    let frases = valorAtual.split(/([.?!]\s*)/);
+
     for (let i = 0; i < frases.length; i++) {
-      let frase = frases[i];
-      if (frase.length > 0) {
-        let primeiraLetra = frase.charAt(0).toUpperCase();
-        let restante = frase.slice(1);
-        frases[i] = primeiraLetra + restante;
+      let parte = frases[i];
+
+      if (parte && !/[.?!]\s*/.test(parte)) {
+        parte = parte.trimStart();
+        if (parte.length > 0) {
+          parte = parte.charAt(0).toUpperCase() + parte.slice(1);
+        }
+        frases[i] = parte;
       }
     }
 
-    resultado.value = frases.join(". ");
+    resultado.value = frases.join("");
   }
 }
 
