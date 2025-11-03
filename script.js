@@ -14,11 +14,21 @@ function btnCap() {
   const input = document.getElementById("input-text");
   const resultado = document.getElementById("textAreaResult");
 
-  let valorAtual = input.value;
+  let valorAtual = input.value.trim();
+
   if (valorAtual.length > 0) {
-    let primeiraLetra = valorAtual.charAt(0).toUpperCase();
-    let restante = valorAtual.slice(1).toLowerCase();
-    resultado.value = primeiraLetra + restante;
+    valorAtual = valorAtual.toLowerCase();
+    let frases = valorAtual.split(". ");
+    for (let i = 0; i < frases.length; i++) {
+      let frase = frases[i];
+      if (frase.length > 0) {
+        let primeiraLetra = frase.charAt(0).toUpperCase();
+        let restante = frase.slice(1);
+        frases[i] = primeiraLetra + restante;
+      }
+    }
+
+    resultado.value = frases.join(". ");
   }
 }
 
@@ -34,7 +44,6 @@ function btnClr() {
 
 function btnContar() {
   const texto = document.getElementById("input-text").value;
-
   const contagemCaracteres = texto.length;
 
   const palavras = texto.trim().split(/\s+/).filter(Boolean);
